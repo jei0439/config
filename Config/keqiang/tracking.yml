@@ -1,0 +1,8 @@
+server:
+  port: 10013
+eruke:
+  instance:
+    status-page-url: http://172.18.96.89:${server.port}/swagger-ui.html
+spring:
+  application:
+    name: tracking
