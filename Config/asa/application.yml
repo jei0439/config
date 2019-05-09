@@ -1,23 +1,23 @@
 spring:
   #oracle数据连接
-  datasource:
-    url: jdbc:oracle:thin:@172.18.55.163:1521:p3dbrp1
-    username: P3WITWORKSTRY
-    password: P3WITWORKSTRY2017
-    driver-class-name: oracle.jdbc.driver.OracleDriver
-  sleuth:
-    web:
-      client:
-        enabled: true
-    sampler:
-      probability: 1.0 #将采样比例设置为 1.0，也就是全部都需要。默认是 0.1
-    zipkin:
-      base-url: http://172.18.55.201:9411/ #Zipkin 服务器的地址
-      enabled: true
-      sender:
-        type: RABBIT
+  # datasource:
+  #   url: jdbc:oracle:thin:@172.18.55.163:1521:p3dbrp1
+  #   username: P3WITWORKSTRY
+  #   password: P3WITWORKSTRY2017
+  #   driver-class-name: oracle.jdbc.driver.OracleDriver
+  # sleuth:
+  #   web:
+  #     client:
+  #       enabled: true
+  #   sampler:
+  #     probability: 1.0 #将采样比例设置为 1.0，也就是全部都需要。默认是 0.1
+  #   zipkin:
+  #     base-url: http://172.18.55.201:9411/ #Zipkin 服务器的地址
+  #     enabled: true
+  #     sender:
+  #       type: RABBIT
   rabbitmq:
-    host: 172.18.50.234
+    host: 192.168.0.110
     port: 5672
     username: admin
     password: admin
@@ -43,12 +43,12 @@ spring:
   #配置mongoDB数据源
   data:
     mongodb:
-      uri: mongodb://sysroot:root@172.18.50.231:27017/admin
+      uri: mongodb://192.168.0.110:27017/admin
   redis:
     # Redis数据库索引（默认为0）
     database: 0
     # Redis服务器地址
-    host: 172.18.50.235
+    host: 192.168.0.110
     #    host: localhost
     # Redis服务器连接端口
     port: 6379
