@@ -17,7 +17,7 @@ spring:
   #     sender:
   #       type: RABBIT
   rabbitmq:
-    host: 192.168.0.110
+    host: 192.168.0.122
     port: 5672
     username: admin
     password: admin
@@ -43,12 +43,12 @@ spring:
   #配置mongoDB数据源
   data:
     mongodb:
-      uri: mongodb://192.168.0.110:27018/admin
+      uri: mongodb://192.168.0.122:27018/admin
   redis:
     # Redis数据库索引（默认为0）
     database: 0
     # Redis服务器地址
-    host: 192.168.0.110
+    host: 192.168.0.122
     #    host: localhost
     # Redis服务器连接端口
     port: 6379
