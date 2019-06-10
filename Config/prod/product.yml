@@ -5,5 +5,3 @@ eruke:
     status-page-url: http://172.18.37.41:${server.port}/swagger-ui.html
 
 
-#文件服务器，模板地址
-file-template-server: http://172.18.55.201:3000/file/template/
