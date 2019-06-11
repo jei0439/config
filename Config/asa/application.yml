@@ -109,3 +109,8 @@ locker:
     interval: 40
     #等待超时时间
     time-out: 5500
+
+#文件服务器，模板地址文件夹
+file:
+  template:
+    server: http://172.18.55.201:3000/file/template/
