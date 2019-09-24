@@ -51,7 +51,7 @@ spring:
     timeout: 20000ms
 eureka:
   client:
-    serviceUrl:
+    service-url:
       defaultZone: http://localhost:8761/eureka/
 #熔断器开启
 feign:
