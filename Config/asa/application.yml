@@ -49,6 +49,9 @@ spring:
     # Redis服务器连接密码（默认为空）
     password:
     timeout: 20000ms
+security:
+  basic:
+    enabled: false
 eureka:
   client:
     serviceUrl:
