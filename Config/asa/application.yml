@@ -25,19 +25,19 @@ spring:
           max-attempts: 10
           initial-interval: 10000 #重试间隔时间（单位毫秒） 
           max-interval: 100000
-          multiplier: 5 
+          multiplier: 5
         #回调应答方式，手动应答
         acknowledge-mode: manual
         #指定最小的消费者数量
         concurrency: 1
         #指定最大的消费者数量
         max-concurrency: 100
-       
+
   #配置mongoDB数据源
   data:
     mongodb:
       uri: mongodb://sysroot:root@192.168.0.105:27018/admin
-#      uri: mongodb://outsource-b08.suntech-power.com.cn:31017/admin
+  #      uri: mongodb://outsource-b08.suntech-power.com.cn:31017/admin
   redis:
     # Redis数据库索引（默认为0）
     database: 0
@@ -50,16 +50,13 @@ spring:
     password:
     timeout: 20000ms
 eureka:
-  instance:
-    prefer-ip-address: true
-    #instance-id: http://account:${serve.port}
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 #熔断器开启
 feign:
-#  httpclient:
-#    enabled: true
+  #  httpclient:
+  #    enabled: true
   hystrix:
     enabled: true
 
