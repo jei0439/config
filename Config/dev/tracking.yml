@@ -4,3 +4,7 @@ server:
 spring:
   application:
     name: tracking
+
+eruke:
+  instance:
+    status-page-url: http://172.18.37.41:${server.port}/swagger-ui.html
