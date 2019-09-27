@@ -29,15 +29,15 @@ zuul:
       strip-prefix: false #必须设置为false，否则zuul代码中回将path截取，导致访问404
     dynamic-API:
       path: /dynamic*/**
-      serviceId: dynamicentity
+      serviceId: factory-model
       strip-prefix: false #必须设置为false，否则zuul代码中回将path截取，导致访问404
     kernal-API:
       path: /kernal*/**
-      serviceId: kernal
+      serviceId: access-control
       strip-prefix: false #必须设置为false，否则zuul代码中回将path截取，导致访问404
     misc-API:
       path: /misc*/**
-      serviceId: misc
+      serviceId: factory-model
       strip-prefix: false #必须设置为false，否则zuul代码中回将path截取，导致访问404
     plugin-API:
       path: /plugin*/**
@@ -45,11 +45,11 @@ zuul:
       strip-prefix: false #必须设置为false，否则zuul代码中回将path截取，导致访问404
     process-API:
       path: /process*/**
-      serviceId: process
+      serviceId: factory-model
       strip-prefix: false #必须设置为false，否则zuul代码中回将path截取，导致访问404
     product-API:
       path: /product*/**
-      serviceId: product
+      serviceId: factory-model
       strip-prefix: false #必须设置为false，否则zuul代码中回将path截取，导致访问404
     tracking-API:
       path: /tracking*/**
@@ -61,11 +61,11 @@ zuul:
       strip-prefix: false #必须设置为false，否则zuul代码中回将path截取，导致访问404
     state-API:
       path: /stateModel*/**
-      serviceId: state-model
+      serviceId: access-control
       strip-prefix: false #必须设置为false，否则zuul代码中回将path截取，导致访问404
     job-API:
       path: /job*/**
-      serviceId: job
+      serviceId: access-control
       strip-prefix: false #必须设置为false，否则zuul代码中回将path截取，导致访问404
 
 
