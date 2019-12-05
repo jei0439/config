@@ -109,7 +109,7 @@ management:
         include: '*'
 
 #数据库名称
-databaseName: weizhihui
+databaseName: tnn
 #自定义锁配置
 
 locker:
