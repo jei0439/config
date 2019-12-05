@@ -1,7 +1,7 @@
 spring:
   #oracle数据连接
   datasource:
-    url: jdbc:oracle:thin:@172.18.0.31:1521:WXP3MESDBPRD01
+    url: jdbc:oracle:thin:@172.18.55.163:1521:p3dbrp1
     username: P3WITWORKSTRY
     password: P3WITWORKSTRY2017
     driver-class-name: oracle.jdbc.driver.OracleDriver
@@ -33,17 +33,20 @@ spring:
       direct:
         acknowledge-mode: manual
       simple:
+        default-requeue-rejected: true
+        retry:
+          #是否支持重试
+          enabled: true
+          max-attempts: 10
+          initial-interval: 10000 #重试间隔时间（单位毫秒）
+          max-interval: 100000
+          multiplier: 5
         #回调应答方式，手动应答
         acknowledge-mode: manual
         #指定最小的消费者数量
         concurrency: 1
         #指定最大的消费者数量
         max-concurrency: 100
-      retry:
-        #是否支持重试
-        enabled: true
-        max-attempts: 10
-        initial-interval: 10000
   #配置mongoDB数据源
   data:
     mongodb:
@@ -86,7 +89,15 @@ ribbon:
   ConnectTimeout: 3000 #ribbon请求连接的超时时间，默认值2000
   MaxAutoRetries: 0     #对当前实例的重试次数，默认0
   MaxAutoRetriesNextServer: 1 #对切换实例的重试次数，默认1
+zuul:
+  ribbonIsolationStrategy: THREAD
 hystrix:
+  threadpool:
+    default:
+      coreSize: 300 
+      maximumSize: 1000 #最大线程数
+      allowMaximumSizeToDivergeFromCoreSize: true
+      maxQueueSize: -1
   command:
     default:  #default全局有效，service id指定应用有效
       execution:

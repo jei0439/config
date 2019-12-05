@@ -3,4 +3,4 @@ server:
 
 eruke:
   instance:
-    status-page-url: http://172.18.37.41:${server.port}/swagger-ui.html
+    status-page-url: http://172.18.96.89:${server.port}/swagger-ui.html
