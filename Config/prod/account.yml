@@ -1,6 +1,0 @@
-server:
-  port: 9999
-eureka:
-  instance:
-    prefer-ip-address: true
-    #instance-id=http://account:${server.port}
