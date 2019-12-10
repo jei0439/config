@@ -42,7 +42,7 @@ spring:
   #配置mongoDB数据源
   data:
     mongodb:
-      uri: mongodb://192.168.0.105:27018/admin
+      uri: mongodb://192.168.0.105:27018/tnn
   #      uri: mongodb://outsource-b08.suntech-power.com.cn:31017/admin
   redis:
     # Redis数据库索引（默认为0）
