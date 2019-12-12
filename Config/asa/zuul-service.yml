@@ -71,8 +71,18 @@ zuul:
       path: /report*/**
       serviceId: report
       strip-prefix: false #必须设置为false，否则zuul代码中回将path截取，导致访问404
-
-
+    audit-API:
+      path: /audit*/**
+      serviceId: audit
+      strip-prefix: false #必须设置为false，否则zuul代码中回将path截取，导致访问404
+    quality-API:
+      path: /spc*/**
+      serviceId: quality
+      strip-prefix: false #必须设置为false，否则zuul代码中回将path截取，导致访问404
+    sampling-API:
+      path: /sampling*/**
+      serviceId: sampling
+      strip-prefix: false #必须设置为false，否则zuul代码中回将path截取，导致访问404
   # host:
   #   connect-timeout-millis: 10000
   #   socket-timeout-millis: 60000
