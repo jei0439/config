@@ -1,0 +1,10 @@
+server:
+  port: 10030
+
+spring:
+  application:
+    name: equipment
+
+eruke:
+  instance:
+    status-page-url: http://172.18.37.41:${server.port}/swagger-ui.html
